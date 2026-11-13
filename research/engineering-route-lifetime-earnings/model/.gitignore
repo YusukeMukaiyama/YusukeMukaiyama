@@ -1,0 +1,4 @@
+raw/
+*.pkl
+wage2025.csv
+__pycache__/
