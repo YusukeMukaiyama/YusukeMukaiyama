@@ -1,0 +1,87 @@
+== case1
+              就業開始  20代平均年収  30代平均年収  40代平均年収  50代平均年収  60-64平均年収  累積額面(〜64歳,平均)  累積額面(推計中央値)   退職金  退職金込み  手取り(退職金込み)  直接学費
+A 工業高校卒       18.0      4.4      5.7      6.4      6.9        5.3          266.5        252.4  13.8  280.3       217.7   0.0
+B 高専卒         20.0      4.8      6.9      8.1      9.1        6.4          320.5        308.0  18.0  338.5       256.1   0.6
+C 高専→大学編入卒    22.0      5.0      7.0      8.8     10.0        7.5          335.8        308.7  19.0  354.7       265.1   1.9
+D 普通科→理工系大学卒  22.0      4.7      6.6      8.2      9.4        7.0          315.3        289.9  19.0  334.2       252.1   5.0
+== case2
+              就業開始  20代平均年収  30代平均年収  40代平均年収  50代平均年収  60-64平均年収  累積額面(〜64歳,平均)  累積額面(推計中央値)   退職金  退職金込み  手取り(退職金込み)  直接学費
+A 工業高校卒       18.0      4.9      6.6      7.5      8.2        5.7          306.6        290.5  15.4  322.0       246.0   0.0
+B 高専卒         20.0      5.0      7.6      9.3     10.4        7.0          358.5        344.5  20.0  378.5       281.6   0.6
+C 高専→大学編入卒    22.0      5.1      7.8      9.9     11.4        7.8          370.7        341.2  20.9  391.5       288.6   1.9
+D 普通科→理工系大学卒  22.0      5.1      7.8      9.9     11.4        7.8          370.7        341.2  20.9  391.5       288.6   5.0
+== case3
+              就業開始  20代平均年収  30代平均年収  40代平均年収  50代平均年収  60-64平均年収  累積額面(〜64歳,平均)  累積額面(推計中央値)   退職金  退職金込み  手取り(退職金込み)  直接学費
+A 工業高校卒       18.0      4.0      5.8      7.3      9.0        6.4          299.1        282.9  13.8  312.9       238.1   0.0
+B 高専卒         20.0      4.7      7.2      9.0      9.4        7.0          338.5        325.1  18.0  356.5       267.1   0.6
+C 高専→大学編入卒    22.0      4.6      6.6      8.6      9.8        9.0          331.6        303.7  19.0  350.6       261.8   1.9
+D 普通科→理工系大学卒  22.0      4.6      6.6      8.6      9.8        9.0          331.6        303.7  19.0  350.6       261.8   5.0
+kosen method range {'m1': 327.8, 'm2': 313.2, 'avg': 320.5}
+EV               lifetime_ev  retire_ev  total_ev
+A 工業高校卒             219.5        9.7     229.2
+B 高専卒               284.6       12.6     297.2
+C 高専→大学編入卒          308.2       13.3     321.5
+D 普通科→理工系大学卒        289.4       13.3     302.7
+crossover
+  case1:A->B {'gross': 32, 'net_of_tuition': 32, 'net_of_tuition_living': 32}
+  case1:A->C {'gross': 38, 'net_of_tuition': 39, 'net_of_tuition_living': 40}
+  case1:A->D {'gross': 42, 'net_of_tuition': 45, 'net_of_tuition_living': 45}
+  case1:B->C {'gross': 48, 'net_of_tuition': 50, 'net_of_tuition_living': 52}
+  case1:B->D {'gross': None, 'net_of_tuition': None, 'net_of_tuition_living': None}
+  case2:A->B {'gross': 36, 'net_of_tuition': 37, 'net_of_tuition_living': 37}
+  case2:A->C {'gross': 41, 'net_of_tuition': 42, 'net_of_tuition_living': 42}
+  case2:A->D {'gross': 41, 'net_of_tuition': 43, 'net_of_tuition_living': 44}
+  case2:B->C {'gross': 51, 'net_of_tuition': 53, 'net_of_tuition_living': 54}
+  case2:B->D {'gross': 51, 'net_of_tuition': 56, 'net_of_tuition_living': 57}
+  case3:A->B {'gross': 29, 'net_of_tuition': 29, 'net_of_tuition_living': 29}
+  case3:A->C {'gross': 41, 'net_of_tuition': 43, 'net_of_tuition_living': 44}
+  case3:A->D {'gross': 41, 'net_of_tuition': 45, 'net_of_tuition_living': 46}
+  case3:B->C {'gross': None, 'net_of_tuition': None, 'net_of_tuition_living': None}
+  case3:B->D {'gross': None, 'net_of_tuition': None, 'net_of_tuition_living': None}
+transfer
+  prem1.000_living0 {'diff_lifetime_gross': -5.209, 'diff_with_retire': -4.249, 'net_after_costs': -5.602, 'breakeven_age': None, 'npv2': -8.076, 'npv3': -8.375, 'irr': -0.015}
+  prem1.000_living1 {'diff_lifetime_gross': -5.209, 'diff_with_retire': -4.249, 'net_after_costs': -7.202, 'breakeven_age': None, 'npv2': -9.567, 'npv3': -9.816, 'irr': -0.018}
+  prem1.030_living0 {'diff_lifetime_gross': 4.25, 'diff_with_retire': 5.21, 'net_after_costs': 3.856, 'breakeven_age': 61, 'npv2': -2.738, 'npv3': -4.269, 'irr': 0.009}
+  prem1.030_living1 {'diff_lifetime_gross': 4.25, 'diff_with_retire': 5.21, 'net_after_costs': 2.256, 'breakeven_age': 63, 'npv2': -4.229, 'npv3': -5.71, 'irr': 0.005}
+  prem1.065_living0 {'diff_lifetime_gross': 15.284, 'diff_with_retire': 16.244, 'net_after_costs': 14.891, 'breakeven_age': 50, 'npv2': 3.489, 'npv3': 0.522, 'irr': 0.032}
+  prem1.065_living1 {'diff_lifetime_gross': 15.284, 'diff_with_retire': 16.244, 'net_after_costs': 13.291, 'breakeven_age': 52, 'npv2': 1.998, 'npv3': -0.919, 'irr': 0.026}
+  prem1.100_living0 {'diff_lifetime_gross': 26.319, 'diff_with_retire': 27.279, 'net_after_costs': 25.925, 'breakeven_age': 44, 'npv2': 9.717, 'npv3': 5.313, 'irr': 0.052}
+  prem1.100_living1 {'diff_lifetime_gross': 26.319, 'diff_with_retire': 27.279, 'net_after_costs': 24.325, 'breakeven_age': 46, 'npv2': 8.226, 'npv3': 3.872, 'irr': 0.044}
+  prem1.150_living0 {'diff_lifetime_gross': 42.082, 'diff_with_retire': 43.042, 'net_after_costs': 41.689, 'breakeven_age': 38, 'npv2': 18.613, 'npv3': 12.157, 'irr': 0.076}
+  prem1.150_living1 {'diff_lifetime_gross': 42.082, 'diff_with_retire': 43.042, 'net_after_costs': 40.089, 'breakeven_age': 39, 'npv2': 17.122, 'npv3': 10.716, 'irr': 0.066}
+  case2 {'diff_lifetime_gross': 12.213, 'diff_with_retire': 13.073, 'breakeven_age': 53, 'npv2': 1.184}
+  case3 {'diff_lifetime_gross': -6.851, 'diff_with_retire': -5.891, 'breakeven_age': None, 'npv2': -11.383}
+== sens case1
+                                 A      B      C      D
+基準(2026年水準・実質成長0%)           280.3  338.5  354.7  334.2
+実質賃金 +0.5%/年                 324.2  393.8  414.8  390.9
+実質賃金 +1.0%/年                 376.1  459.5  486.2  458.3
+実質賃金 −0.5%/年                 243.2  291.8  304.2  286.5
+同一企業で定年まで(標準労働者型)            331.1  384.8  389.1  366.5
+30歳で転職し+8%（退職金6割）            292.1  353.1  370.8  348.9
+30歳で転職し+15%（IT想定・退職金6割）      307.2  372.2  391.5  368.3
+役職定年(55歳)・再雇用(60歳で59歳時の55%)  270.0  328.6  338.2  318.7
+理系(C・D)にさらに+5%の専攻プレミアム       280.3  338.5  371.5  350.0
+== sens case2
+                                 A      B      C      D
+基準(2026年水準・実質成長0%)           322.0  378.5  391.5  391.5
+実質賃金 +0.5%/年                 372.5  440.8  458.1  458.1
+実質賃金 +1.0%/年                 432.4  514.8  537.3  537.3
+実質賃金 −0.5%/年                 279.2  325.9  335.5  335.5
+同一企業で定年まで(標準労働者型)            380.4  430.3  429.5  429.5
+30歳で転職し+8%（退職金6割）            335.9  395.2  409.6  409.6
+30歳で転職し+15%（IT想定・退職金6割）      353.4  416.8  432.6  432.6
+役職定年(55歳)・再雇用(60歳で59歳時の55%)  312.8  368.3  375.2  375.2
+大企業の正社員のまま65歳まで(定年65歳型)      328.3  389.4  401.7  401.7
+== sens case3
+                                 A      B      C      D
+基準(2026年水準・実質成長0%)           312.9  356.5  350.6  350.6
+実質賃金 +0.5%/年                 364.3  415.0  411.3  411.3
+実質賃金 +1.0%/年                 425.5  484.4  483.7  483.7
+実質賃金 −0.5%/年                 269.6  307.1  299.6  299.6
+同一企業で定年まで(標準労働者型)            369.9  405.4  384.5  384.5
+30歳で転職し+8%（退職金6割）            327.6  372.6  366.6  366.6
+30歳で転職し+15%（IT想定・退職金6割）      345.3  392.9  387.3  387.3
+役職定年(55歳)・再雇用(60歳で59歳時の55%)  302.9  343.2  325.7  325.7
+same ability {"high": {"A": {"gross": 306.5826256678773, "total": 321.9726256678773}, "B": {"gross": 320.4822551996523, "total": 338.4822551996523}, "C": {"gross": 335.7664054162984, "total": 354.7264054162984}, "D": {"gross": 335.7664054162984, "total": 354.7264054162984}}, "mid": {"A": {"gross": 266.4548572615873, "total": 280.28485726158726}, "D": {"gross": 299.5099391037404, "total": 317.5219391037404}}}
+tiers {"旧帝大・難関国公立": {"D_gross": 362.5646631255804, "D_total": 381.5246631255804, "C_gross": 362.5646631255804, "vs_B": 43.0424079259281}, "地方国公立": {"D_gross": 331.03730111466047, "D_total": 349.99730111466044, "C_gross": 331.03730111466047, "vs_B": 11.515045915008159}, "私立理工系(中堅)": {"D_gross": 308.9681477070164, "D_total": 327.92814770701636, "C_gross": 308.9681477070164, "vs_B": -10.554107492635922}, "私立理工系(入試難易度低)": {"D_gross": 290.0517305004644, "D_total": 309.01173050046435, "C_gross": 290.0517305004644, "vs_B": -29.470524699187933}}
